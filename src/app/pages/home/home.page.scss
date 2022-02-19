@@ -1,9 +1,10 @@
-h1{
+h1 {
   font-size: 30px;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
-p{
+p {
   font-size: 15px;
   margin-top: 0;
 }
@@ -13,18 +14,18 @@ p{
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.22);
 }
 
-.recipe-card_featured-image{
+.recipe-card_featured-image {
   border-radius: 20px;
 }
 
-.recipe-card_caption{
+.recipe-card_caption {
   position: absolute;
   bottom: 0;
   left: 12px;
   z-index: 2;
 }
 
-.recipe-card_body{
+.recipe-card_body {
   position: relative;
 }
 
