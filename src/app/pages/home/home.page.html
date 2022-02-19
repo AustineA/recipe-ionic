@@ -1,20 +1,44 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Recipes
     </ion-title>
+   <ion-buttons slot="end">
+     <ion-button (click)="onClick()">
+       <ion-icon slot="end" name="search-outline"></ion-icon>
+     </ion-button>
+   </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+    <ion-grid fixed>
+      <ion-row class="ion-padding-bottom">
+       <div class="recipe-card">
+         <div class="recipe-card_body">
+          <img class="recipe-card_featured-image" src="../../assets/images/Fish.jpg"/>
+          <div class="recipe-card_caption">
+            <h1>Fish</h1>
+            <p>Recipe Category</p>
+          </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+         </div>
+       </div>
+      </ion-row>
+
+      <ion-row>
+        <div class="recipe-card">
+          <div class="recipe-card_body">
+           <img class="recipe-card_featured-image" src="../../assets/images/Chicken.jpg"/>
+           <div class="recipe-card_caption">
+             <h1>Chicken</h1>
+             <p>Recipe Category</p>
+           </div>
+ 
+          </div>
+        </div>
+       </ion-row>
+    </ion-grid>
+
+
 </ion-content>

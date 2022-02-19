@@ -1,27 +1,41 @@
-#container {
-  text-align: center;
+h1{
+  font-size: 30px;
+  font-weight: bold;
+}
 
+p{
+  font-size: 15px;
+  margin-top: 0;
+}
+.recipe-card {
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.22);
+}
+
+.recipe-card_featured-image{
+  border-radius: 20px;
+}
+
+.recipe-card_caption{
   position: absolute;
+  bottom: 0;
+  left: 12px;
+  z-index: 2;
+}
+
+.recipe-card_body{
+  position: relative;
+}
+
+.recipe-card_body::after {
+  position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, #000000 0%, rgba(196, 196, 196, 0) 56.57%);
+  z-index: 1;
+  border-radius: 20px;
 }
