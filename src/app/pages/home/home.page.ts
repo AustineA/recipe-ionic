@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +25,7 @@ export class HomePage {
       featuredImage: '../../assets/images/Fruit.jpg',
     },
     {
-      recipe: 'vega',
+      recipe: 'vegan',
       featuredImage: '../../assets/images/Vegan.jpg',
     },
     {
@@ -33,10 +34,10 @@ export class HomePage {
     },
   ];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
-  goTo(recipe) {
-    console.log(recipe);
+  goTo({ recipe }) {
+    this.router.navigate([`/recipes/${recipe}`]);
   }
   search() {}
 }
