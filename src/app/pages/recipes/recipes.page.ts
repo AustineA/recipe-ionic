@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { recipes } from '../../services/shared/data';
 
 @Component({
@@ -19,5 +19,22 @@ export class RecipesPage implements OnInit {
 
   getRecipes() {
     this.categoryRecipes = recipes[this.params]?.hits;
+  }
+
+  detail({ recipe }) {
+    const navExtras: NavigationExtras = {
+      state: recipe,
+    };
+
+    const slug = this.parameterize(recipe.label);
+    this.router.navigate([`/recipes/recipe-detail/${slug}`], navExtras);
+  }
+
+  parameterize(string) {
+    return string
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-zA-Z0-9 -]/, '')
+      .replace(/\s/g, '-');
   }
 }

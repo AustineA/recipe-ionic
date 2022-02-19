@@ -15,7 +15,12 @@
   </ion-header>
 
   <ion-list lines="full">
-    <ion-item *ngFor="let item of categoryRecipes" button detail="true">
+    <ion-item
+      *ngFor="let item of categoryRecipes"
+      button
+      detail="true"
+      (click)="detail(item)"
+    >
       <img
         [src]="item?.recipe?.image"
         alt=""
