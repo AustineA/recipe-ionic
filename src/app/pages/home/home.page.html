@@ -10,9 +10,17 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  <ion-grid fixed>
-    <ion-row class="ion-padding-bottom" *ngFor="let recipe of recipes">
-      <div class="recipe-card" (click)="goTo(recipe)">
+  <ion-grid>
+    <ion-row class="ion-padding-bottom">
+      <ion-col
+        class="recipe-card"
+        (click)="goTo(recipe)"
+        size-xs="12"
+        size-sm="6"
+        size-md="3"
+        size-lg="2"
+        *ngFor="let recipe of recipes"
+      >
         <div class="recipe-card_body">
           <img
             class="recipe-card_featured-image"
@@ -23,7 +31,7 @@
             <p>Recipe Category</p>
           </div>
         </div>
-      </div>
+      </ion-col>
     </ion-row>
   </ion-grid>
 </ion-content>
