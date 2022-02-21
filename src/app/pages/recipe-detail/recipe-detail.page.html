@@ -42,5 +42,31 @@
         </div>
       </ul>
     </div>
+
+    <ion-modal
+      [isOpen]="isActive"
+      [breakpoints]="[0, 0.5, 1]"
+      [initialBreakpoint]="0.7"
+      class="nutrient-sheet"
+    >
+      <ng-template>
+        <app-nutrition
+          [calories]="recipe?.calories"
+          [totalWeight]="recipe?.totalWeight"
+          [nutrients]="recipe?.digest"
+        ></app-nutrition>
+      </ng-template>
+    </ion-modal>
+
+    <div class="ion-padding-top">
+      <ion-button
+        shape="round"
+        expand="block"
+        color="secondary"
+        strong="true"
+        (click)="seeNutrition()"
+        >See Nutrition</ion-button
+      >
+    </div>
   </div>
 </ion-content>

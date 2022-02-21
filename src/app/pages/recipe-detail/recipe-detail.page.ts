@@ -8,6 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class RecipeDetailPage implements OnInit {
   recipe: any = {};
+  isActive: boolean = false;
 
   constructor(private route: ActivatedRoute, private router: Router) {}
 
@@ -18,5 +19,9 @@ export class RecipeDetailPage implements OnInit {
 
   getRecipe() {
     this.recipe = this.router.getCurrentNavigation().extras.state;
+  }
+
+  seeNutrition() {
+    this.isActive = !this.isActive;
   }
 }

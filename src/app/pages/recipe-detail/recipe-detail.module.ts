@@ -7,14 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { RecipeDetailPageRoutingModule } from './recipe-detail-routing.module';
 
 import { RecipeDetailPage } from './recipe-detail.page';
+import { NutritionComponent } from '../../components/nutrition/nutrition.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RecipeDetailPageRoutingModule
+    RecipeDetailPageRoutingModule,
   ],
-  declarations: [RecipeDetailPage]
+  declarations: [RecipeDetailPage, NutritionComponent],
 })
 export class RecipeDetailPageModule {}

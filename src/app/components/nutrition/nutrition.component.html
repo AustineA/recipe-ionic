@@ -1,0 +1,34 @@
+<div class="ion-padding">
+  <div class="recipe-nutrition_header">
+    <ion-label>Nutritional Facts</ion-label>
+    <span
+      >Based on {{ totalWeight ? totalWeight?.toFixed(0) : "0" }} g
+      servings</span
+    >
+  </div>
+
+  <div class="recipe-nutrition">
+    <div class="recipe-nutrition_item" *ngIf="calories">
+      <h5>Calories</h5>
+      <h5>{{ calories?.toFixed(0) }}</h5>
+    </div>
+
+    <div *ngFor="let nutrient of nutrients.slice(0, 3)">
+      <div class="recipe-nutrition_item">
+        <h5>{{ nutrient?.label }}</h5>
+        <h5>
+          {{ nutrient ? nutrient?.total?.toFixed(0) : "0" }}{{ nutrient?.unit }}
+        </h5>
+      </div>
+      <ul class="recipe-nutrition_sub-item" *ngIf="nutrient?.sub">
+        <li *ngFor="let sub of nutrient?.sub">
+          <div>
+            <ion-icon name="remove-outline" slot="start"></ion-icon>
+            <h6>{{ sub?.label }}</h6>
+          </div>
+          <h6>{{ sub ? sub?.total?.toFixed(0) : "0" }}{{ sub?.unit }}</h6>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
