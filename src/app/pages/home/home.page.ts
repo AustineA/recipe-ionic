@@ -39,5 +39,7 @@ export class HomePage {
   goTo({ recipe }) {
     this.router.navigate([`/recipes/${recipe}`]);
   }
-  search() {}
+  search() {
+    this.router.navigate([`/search/`]);
+  }
 }

@@ -1,7 +1,8 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start" mode="md">
-      <ion-back-button class="recipe-back_btn"> </ion-back-button>
+      <ion-back-button class="recipe-back_btn" text="" mode="md">
+      </ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -45,7 +46,7 @@
 
     <ion-modal
       [isOpen]="isActive"
-      [breakpoints]="[0, 0.5, 1]"
+      [breakpoints]="[0, 0.7, 1]"
       [initialBreakpoint]="0.7"
       class="nutrient-sheet"
     >

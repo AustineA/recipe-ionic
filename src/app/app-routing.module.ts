@@ -24,6 +24,10 @@ const routes: Routes = [
         (m) => m.RecipeDetailPageModule
       ),
   },
+  {
+    path: 'search',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
+  },
 ];
 
 @NgModule({

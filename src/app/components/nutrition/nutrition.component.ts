@@ -11,7 +11,5 @@ export class NutritionComponent implements OnInit {
   @Input() nutrients: any = [];
   constructor() {}
 
-  ngOnInit() {
-    console.log(this.nutrients);
-  }
+  ngOnInit() {}
 }
