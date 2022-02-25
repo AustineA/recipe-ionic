@@ -12,4 +12,8 @@ export class NutritionComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  format(value) {
+    return parseFloat(value).toFixed(0);
+  }
 }
