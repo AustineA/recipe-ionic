@@ -29,10 +29,7 @@
       />
 
       <div class="recipe-caption">
-        <ion-label
-          >{{item?.recipe?.label?.length < 18 ? item?.recipe?.label :
-          item?.recipe?.label?.slice(0,18) + "..." }}</ion-label
-        >
+        <ion-label class="ion-text-wrap">{{item?.recipe?.label }}</ion-label>
         <span> {{item?.recipe?.dishType}} </span>
         <div class="recipe-total-time">
           <ion-icon name="time" color="recipe-green"></ion-icon>

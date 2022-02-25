@@ -40,19 +40,21 @@ export class SearchPage implements OnInit {
       .replace(/\s/g, '-');
   }
 
-  async search() {
-    const term = this.searchBar.value;
+  handleChange(e) {
+    this.term = e.target.value;
+  }
 
+  async search() {
     const loading = await this.loadingCtrl.create({
       spinner: 'crescent',
-      message: `Search...${term}`,
+      message: `Search...${this.term}`,
     });
 
     loading.present();
 
     try {
       const result: any = await this.searchService
-        .searchRecipeAPI(term)
+        .searchRecipeAPI(this.term)
         .toPromise();
       this.categoryRecipes = result?.hits;
       loading.dismiss();

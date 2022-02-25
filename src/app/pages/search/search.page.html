@@ -12,6 +12,7 @@
       placeholder="Type here to search"
       debounce="500"
       [value]="term"
+      (ionInput)="handleChange($event)"
       #searchBar
     ></ion-searchbar>
     <ion-buttons slot="end">

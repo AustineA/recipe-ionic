@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SearchService {
-  baseUrl: string =
-    'https://api.edamam.com/api/recipes/v2?type=public&app_id=f2d8982a&app_key=0b3e58696136b691bf5fa338d52e9d01';
+  baseUrl: string = environment.apiURL;
   constructor(private http: HttpClient) {}
 
   searchRecipeAPI(term) {
