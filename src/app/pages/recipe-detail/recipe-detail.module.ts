@@ -8,6 +8,7 @@ import { RecipeDetailPageRoutingModule } from './recipe-detail-routing.module';
 
 import { RecipeDetailPage } from './recipe-detail.page';
 import { NutritionComponent } from '../../components/nutrition/nutrition.component';
+import { SharedDirectivesModule } from 'src/app/directives/shared-directives.module';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { NutritionComponent } from '../../components/nutrition/nutrition.compone
     FormsModule,
     IonicModule,
     RecipeDetailPageRoutingModule,
+    SharedDirectivesModule,
   ],
   declarations: [RecipeDetailPage, NutritionComponent],
 })

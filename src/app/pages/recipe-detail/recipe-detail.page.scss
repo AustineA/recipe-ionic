@@ -44,15 +44,14 @@ ion-icon {
 
 .image-header {
   margin-top: -57px;
-
-  img {
-    width: 100%;
-    object-fit: cover;
-    height: 350px;
-  }
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
 }
 
 .recipe-detail_holder {
+  position: absolute;
+  width: 100%;
   margin-top: -40px;
   background: var(--ion-color-light);
   position: relative;

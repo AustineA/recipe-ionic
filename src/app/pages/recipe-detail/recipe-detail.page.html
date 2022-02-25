@@ -7,10 +7,16 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="light">
-  <div class="image-header">
-    <img [src]="recipe?.image" alt="" />
-  </div>
+<ion-content
+  [fullscreen]="true"
+  color="light"
+  appParallaxHeader
+  [scrollEvents]="true"
+>
+  <div
+    class="image-header"
+    [style.background-image]="'url(' + recipe?.image + ')'"
+  ></div>
 
   <div class="recipe-detail_holder">
     <ion-label>{{recipe?.label}}</ion-label>
