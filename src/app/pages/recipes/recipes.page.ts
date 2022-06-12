@@ -10,6 +10,7 @@ import { recipes } from '../../services/shared/data';
 export class RecipesPage implements OnInit {
   params: string;
   categoryRecipes = [];
+  images = [];
   constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit() {
@@ -19,11 +20,12 @@ export class RecipesPage implements OnInit {
 
   getRecipes() {
     this.categoryRecipes = recipes[this.params]?.hits;
+    this.images = recipes[this.params]?.staticImage;
   }
 
-  detail({ recipe }) {
+  detail({ recipe }, i) {
     const navExtras: NavigationExtras = {
-      state: recipe,
+      state: { ...recipe, staticImage: this.images[i] },
     };
 
     const slug = this.parameterize(recipe.label);

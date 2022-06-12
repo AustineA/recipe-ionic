@@ -2,12 +2,7 @@ const FishRecipes = {
   from: 1,
   to: 20,
   count: 10000,
-  _links: {
-    next: {
-      href: 'https://api.edamam.com/api/recipes/v2?q=fish&app_key=0b3e58696136b691bf5fa338d52e9d01&_cont=CHcVQBtNNQphDmgVQntAEX4BYVRtAQIEQ2FFA2MQZ1d0AwACUXlSA2cWagYhBAFWSjERVTMRNQF2BlAHFjNJUWcVMgd6DQsVLnlSVSBMPkd5BgMbUSYRVTdgMgksRlpSAAcRXTVGcV84SU4%3D&type=public&app_id=f2d8982a',
-      title: 'Next page',
-    },
-  },
+
   hits: [
     {
       recipe: {
@@ -1534,12 +1529,6 @@ const FishRecipes = {
             unit: 'g',
           },
         ],
-      },
-      _links: {
-        self: {
-          href: 'https://api.edamam.com/api/recipes/v2/ad0e583f5f88accd3ce54037a62c84ad?type=public&app_id=f2d8982a&app_key=0b3e58696136b691bf5fa338d52e9d01',
-          title: 'Self',
-        },
       },
     },
     {
@@ -16101,6 +16090,19 @@ const FishRecipes = {
     },
   ],
 };
+
+const FishImages = [
+  '../../assets/images/fish/fish-1.jpeg',
+  '../../assets/images/fish/fish-2.jpeg',
+  '../../assets/images/fish/fish-3.jpeg',
+  '../../assets/images/fish/fish-4.jpeg',
+  '../../assets/images/fish/fish-5.jpeg',
+  '../../assets/images/fish/fish-6.jpeg',
+  '../../assets/images/fish/fish-7.jpeg',
+  '../../assets/images/fish/fish-8.jpeg',
+  '../../assets/images/fish/fish-9.jpeg',
+  '../../assets/images/fish/fish-10.jpeg',
+];
 
 const ChickenRecipes = {
   from: 1,
@@ -31815,6 +31817,19 @@ const ChickenRecipes = {
   ],
 };
 
+const ChickenImages = [
+  '../../assets/images/chicken/chicken-1.jpeg',
+  '../../assets/images/chicken/chicken-2.jpeg',
+  '../../assets/images/chicken/chicken-3.jpeg',
+  '../../assets/images/chicken/chicken-4.jpeg',
+  '../../assets/images/chicken/chicken-5.jpeg',
+  '../../assets/images/chicken/chicken-6.jpeg',
+  '../../assets/images/chicken/chicken-7.jpeg',
+  '../../assets/images/chicken/chicken-8.jpeg',
+  '../../assets/images/chicken/chicken-9.jpeg',
+  '../../assets/images/chicken/chicken-10.jpeg',
+];
+
 const BeefRecipes = {
   from: 1,
   to: 20,
@@ -47173,6 +47188,19 @@ const BeefRecipes = {
   ],
 };
 
+const BeefImages = [
+  '../../assets/images/beef/beef-1.jpeg',
+  '../../assets/images/beef/beef-2.jpeg',
+  '../../assets/images/beef/beef-3.jpeg',
+  '../../assets/images/beef/beef-4.jpeg',
+  '../../assets/images/beef/beef-5.jpeg',
+  '../../assets/images/beef/beef-6.jpeg',
+  '../../assets/images/beef/beef-7.jpeg',
+  '../../assets/images/beef/beef-8.jpeg',
+  '../../assets/images/beef/beef-9.jpeg',
+  '../../assets/images/beef/beef-10.jpeg',
+];
+
 const JuiceRecipes = {
   from: 1,
   to: 20,
@@ -62491,6 +62519,19 @@ const JuiceRecipes = {
     },
   ],
 };
+
+const JuiceImages = [
+  '../../assets/images/juice/juice-1.jpeg',
+  '../../assets/images/juice/juice-2.jpeg',
+  '../../assets/images/juice/juice-3.jpeg',
+  '../../assets/images/juice/juice-4.jpeg',
+  '../../assets/images/juice/juice-5.jpeg',
+  '../../assets/images/juice/juice-6.jpeg',
+  '../../assets/images/juice/juice-7.jpeg',
+  '../../assets/images/juice/juice-8.jpeg',
+  '../../assets/images/juice/juice-9.jpeg',
+  '../../assets/images/juice/juice-10.jpeg',
+];
 
 const VeganRecipes = {
   from: 1,
@@ -78713,6 +78754,19 @@ const VeganRecipes = {
   ],
 };
 
+const VeganImages = [
+  '../../assets/images/vegan/vegan-1.jpeg',
+  '../../assets/images/vegan/vegan-2.jpeg',
+  '../../assets/images/vegan/vegan-3.jpeg',
+  '../../assets/images/vegan/vegan-4.jpeg',
+  '../../assets/images/vegan/vegan-5.jpeg',
+  '../../assets/images/vegan/vegan-6.jpeg',
+  '../../assets/images/vegan/vegan-7.jpeg',
+  '../../assets/images/vegan/vegan-8.jpeg',
+  '../../assets/images/vegan/vegan-9.jpeg',
+  '../../assets/images/vegan/vegan-10.jpeg',
+];
+
 const SaladRecipes = {
   from: 1,
   to: 20,
@@ -94264,11 +94318,24 @@ const SaladRecipes = {
   ],
 };
 
+const SaladImages = [
+  '../../assets/images/salad/salad-1.jpeg',
+  '../../assets/images/salad/salad-2.jpeg',
+  '../../assets/images/salad/salad-3.jpeg',
+  '../../assets/images/salad/salad-4.jpeg',
+  '../../assets/images/salad/salad-5.jpeg',
+  '../../assets/images/salad/salad-6.jpeg',
+  '../../assets/images/salad/salad-7.jpeg',
+  '../../assets/images/salad/salad-8.jpeg',
+  '../../assets/images/salad/salad-9.jpeg',
+  '../../assets/images/salad/salad-10.jpeg',
+];
+
 export const recipes = {
-  fish: FishRecipes,
-  chicken: ChickenRecipes,
-  beef: BeefRecipes,
-  juice: JuiceRecipes,
-  vegan: VeganRecipes,
-  salad: SaladRecipes,
+  fish: { ...FishRecipes, staticImage: [...FishImages] },
+  chicken: { ...ChickenRecipes, staticImage: [...ChickenImages] },
+  beef: { ...BeefRecipes, staticImage: [...BeefImages] },
+  juice: { ...JuiceRecipes, staticImage: [...JuiceImages] },
+  vegan: { ...VeganRecipes, staticImage: [...VeganImages] },
+  salad: { ...SaladRecipes, staticImage: [...SaladImages] },
 };

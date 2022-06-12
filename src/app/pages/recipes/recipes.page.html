@@ -16,17 +16,12 @@
 
   <ion-list lines="full">
     <ion-item
-      *ngFor="let item of categoryRecipes"
+      *ngFor="let item of categoryRecipes.slice(0,10); let i = index"
       button
       detail="true"
-      (click)="detail(item)"
+      (click)="detail(item, i)"
     >
-      <img
-        [src]="item?.recipe?.image"
-        alt=""
-        slot="start"
-        class="recipe-thumbnail"
-      />
+      <img [src]="images[i]" alt="" slot="start" class="recipe-thumbnail" />
 
       <div class="recipe-caption">
         <ion-label class="ion-text-wrap">{{item?.recipe?.label }}</ion-label>
